@@ -31,12 +31,16 @@ body:
       label: Related Ad Platform (if applicable)
       multiple: true
       options:
-        - Google Ads
-        - Meta Ads
+        - Google Ads (incl. AI Max)
+        - Meta Ads (incl. Andromeda + GEM + Lattice)
+        - YouTube Ads (incl. Demand Gen + CTV)
         - LinkedIn Ads
-        - TikTok Ads
+        - TikTok Ads (post-USDS)
         - Microsoft Ads
-        - Apple Search Ads
+        - Apple Ads (formerly Apple Search Ads)
+        - Amazon Ads (Sponsored Products / Brands / Display)
+        - Attribution (AdAttributionKit, GA4, Consent Mode V2, MMP)
+        - Server-side tracking (sGTM, CAPI Gateway)
         - Cross-platform / General
     validations:
       required: false

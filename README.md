@@ -28,6 +28,7 @@ Comprehensive paid advertising audit and optimization skill conforming to the [A
 - [Quick Start](#quick-start)
 - [Commands](#commands)
 - [Features](#features)
+- [Eval Harness (Wave 2)](#eval-harness-wave-2)
 - [Architecture](#architecture)
 - [How It Analyzes Your Ads](#how-it-analyzes-your-ads)
 - [FAQ](#faq)

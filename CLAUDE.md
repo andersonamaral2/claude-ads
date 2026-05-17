@@ -16,20 +16,30 @@ claude-ads/
   ads/                               # Main orchestrator skill
     SKILL.md                         # Entry point, routing table, core rules
     references/                      # On-demand knowledge files (25 files)
-    scripts/                         # Python execution scripts
-  skills/                            # 19 specialized sub-skills
+  scripts/                           # Python execution scripts (repo root; installed under <SKILL_BASE>/ads/scripts/)
+  skills/                            # 22 specialized sub-skills (Wave 2)
     ads-audit/SKILL.md              # Full multi-platform audit
-    ads-google/SKILL.md            # Google Ads deep analysis
-    ads-meta/SKILL.md              # Meta/Facebook Ads analysis
-    ads-youtube/SKILL.md           # YouTube Ads analysis
-    ads-linkedin/SKILL.md         # LinkedIn Ads analysis
-    ads-tiktok/SKILL.md           # TikTok Ads analysis
-    ads-microsoft/SKILL.md        # Microsoft/Bing Ads analysis
-    ads-creative/SKILL.md         # Creative quality assessment
-    ads-landing/SKILL.md          # Landing page analysis
-    ads-budget/SKILL.md           # Budget allocation optimization
-    ads-plan/SKILL.md             # Strategic ad planning by industry
-    ads-competitor/SKILL.md       # Competitor ad research
+    ads-google/SKILL.md             # Google Ads deep analysis (incl. AI Max)
+    ads-meta/SKILL.md               # Meta/Facebook Ads (Andromeda + GEM + Lattice + Entity-ID predictor)
+    ads-youtube/SKILL.md            # YouTube Ads (Demand Gen, Shorts, CTV)
+    ads-linkedin/SKILL.md           # LinkedIn Ads analysis
+    ads-tiktok/SKILL.md             # TikTok Ads (post-USDS)
+    ads-microsoft/SKILL.md          # Microsoft/Bing Ads analysis
+    ads-apple/SKILL.md              # Apple Ads (AdAttributionKit, dual attribution)
+    ads-amazon/SKILL.md             # Amazon Ads (Sponsored Products/Brands/Display, ACOS/TACOS)
+    ads-attribution/SKILL.md        # Cross-platform attribution audit
+    ads-server-side-tracking/SKILL.md # sGTM, CAPI Gateway, dedup, hashing
+    ads-creative/SKILL.md           # Creative quality + Entity-ID retrieval scoring
+    ads-landing/SKILL.md            # Landing page analysis
+    ads-budget/SKILL.md             # Budget allocation optimization
+    ads-plan/SKILL.md               # Strategic ad planning by industry
+    ads-competitor/SKILL.md         # Competitor ad research
+    ads-math/SKILL.md               # PPC financial calculator
+    ads-test/SKILL.md               # A/B test design
+    ads-dna/SKILL.md                # Brand DNA extraction
+    ads-create/SKILL.md             # Campaign concepts and copy briefs
+    ads-generate/SKILL.md           # AI ad image generation
+    ads-photoshoot/SKILL.md         # Product photography in 5 styles
   agents/                            # 10 agents (6 audit + 4 creative)
     audit-google.md                # Google Ads audit agent
     audit-meta.md                  # Meta Ads audit agent
@@ -37,6 +47,16 @@ claude-ads/
     audit-tracking.md              # Conversion tracking agent
     audit-budget.md                # Budget analysis agent
     audit-compliance.md            # Compliance verification agent
+    creative-strategist.md         # Campaign concept strategist
+    visual-designer.md             # AI image generation orchestrator
+    copy-writer.md                 # Headlines, CTAs, primary text
+    format-adapter.md              # Asset dimension validation
+  tests/                             # 41-test pytest eval harness (Wave 2)
+    conftest.py                    # Shared fixtures
+    fixtures/check-catalog.yaml    # 209-check canonical catalog
+    routing/                       # Trigger → skill snapshot tests
+    audit/                         # Catalog coverage + scoring math tests
+    scripts/                       # SSRF + sanitize_error regression tests
   install.sh / install.ps1          # Cross-platform installers
   uninstall.sh / uninstall.ps1      # Cross-platform uninstallers
 ```

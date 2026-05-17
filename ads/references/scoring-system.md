@@ -89,6 +89,37 @@ S_total = Σ(C_pass × W_sev × W_cat) / Σ(C_total × W_sev × W_cat) × 100
 | Settings & Performance | 15% | CPC advantage tracking, conversion rate comparison (5 checks) |
 | Import Safety, Compliance & Video | N/A | v1.5: scheduled imports, Consent Mode, CTV, video (4 checks) |
 
+### Amazon Ads (v1.7 — inline in `skills/ads-amazon/SKILL.md`, not yet in catalog)
+| Category | Weight | Rationale |
+|----------|--------|-----------|
+| Search-Term Harvesting & Negatives | 25% | Auto→Manual harvest cadence is the single biggest TACOS lever |
+| ACOS / TACOS Discipline | 20% | Per-portfolio targets tied to contribution margin; TACOS trend |
+| Campaign Structure & Portfolios | 15% | Auto + Manual mix per ASIN, brand-defense isolation |
+| Bid & Budget Management | 15% | Dynamic bidding strategy per campaign type, placement multipliers |
+| Sponsored Brands | 10% | HSA, SB Video for high-AOV products |
+| Sponsored Display | 10% | Audience vs contextual separation, off-Amazon SD |
+| Brand Analytics & Reporting | 5% | Top Search Terms, Repeat Purchase, Amazon Attribution |
+
+### Apple Ads (v1.7 — inline in `skills/ads-apple/SKILL.md`, not yet in catalog)
+| Category | Weight | Rationale |
+|----------|--------|-----------|
+| MMP / AdAttributionKit Integration | 30% | Without proper dual attribution (SKAN + AAK), bid algorithms fly blind |
+| Campaign Structure & Targeting | 20% | Discovery / Search Tab / Today / Search Results / Product Pages split |
+| Bid Health & CPT Goals | 15% | Maximize Conversions vs CPA goal vs manual; country-specific CPA goals |
+| Custom Product Pages (CPPs) | 15% | Required since Creative Sets deprecation; per-keyword-theme CPPs |
+| Budget Pacing | 10% | Daily caps appropriate to install volume + algorithm learning |
+| ATT Opt-in & Privacy Threshold | 10% | <30% opt-in shifts reliance to SKAN/AAK + privacy threshold |
+
+### Attribution + Server-side Tracking (v1.7 — inline in `skills/ads-attribution/SKILL.md` and `skills/ads-server-side-tracking/SKILL.md`)
+| Category | Weight | Rationale |
+|----------|--------|-----------|
+| Web Attribution (GA4 + Ads + CAPI) | 30% | Foundational signal for every web channel |
+| Server-Side Stitching | 20% | event_id dedup, MMP first-party stitching, offline conversion import |
+| iOS Attribution (AdAttributionKit + ATT) | 20% | Required for any iOS app advertiser |
+| Consent Mode V2 | 15% | Advanced mode required for EEA signal recovery |
+| MMP Health (mobile) | 10% | AppsFlyer/Adjust/Branch/Singular configuration |
+| Cross-Device / Customer Match | 5% | Customer Match list freshness, Enhanced Conversions parameter coverage |
+
 ## Grading Thresholds
 
 | Grade | Score | Label | Action Required |
@@ -143,17 +174,25 @@ Cross-platform checks are scored at 100% weight in the aggregate score (not with
 
 ## Total Check Counts (v1.5)
 
-| Platform | v1.0 | v1.5 | Change |
-|----------|------|------|--------|
-| Google | 74 | 80 | +6 (AI Max, Demand Gen, CTV, PMax negatives) |
-| Meta | 46 | 50 | +4 (Andromeda, attribution, Incremental, Threads) |
-| LinkedIn | 25 | 27 | +2 (CRM, EU compliance) |
-| TikTok | 25 | 28 | +3 (Search, GMV Max, Events API) |
-| Microsoft | 20 | 24 | +4 (imports, Consent Mode, CTV, video) |
-| Cross-platform | 0 | 3 | +3 (privacy, creative diversity, refresh cadence) |
-| **Total** | **190** | **212** | **+22 new checks** |
+| Platform | v1.0 | v1.5 | v1.7 | Change vs v1.5 |
+|----------|------|------|------|----------------|
+| Google | 74 | 80 | 80 | — (AI Max deep-rewrite via SKILL.md body) |
+| Meta | 46 | 50 | 50 | — (Andromeda + GEM + Lattice + Entity-ID predictor via SKILL.md body) |
+| LinkedIn | 25 | 27 | 27 | — |
+| TikTok | 25 | 28 | 28 | — (USDS context via SKILL.md body) |
+| Microsoft | 20 | 24 | 24 | — |
+| Cross-platform | 0 | 3 | 3 | — |
+| **Catalog-tracked total** | **190** | **212** | **212** | — |
+| Apple (SKILL.md inline) | — | — | 35+ | New in v1.7 weight table above |
+| Amazon (SKILL.md inline) | — | — | 30+ | New in v1.7 weight table above |
+| Attribution + Server-side (SKILL.md inline) | — | — | 25+ | New in v1.7 weight table above |
+| **Grand total (all sources)** | **190** | **212** | **~302+** | **+90+ new checks via inline thresholds** |
 
-Note: Apple and YouTube checks are scored within their respective SKILL.md files, not in the reference audit checklists.
+Note: catalog-tracked checks are verified bidirectionally by the eval harness
+(`tests/audit/test_check_coverage.py`). Apple, Amazon, and Attribution +
+Server-side checks live inline in their respective SKILL.md files; their
+dedicated audit reference files (`apple-audit.md`, `amazon-audit.md`,
+`attribution-audit.md`) and catalog entries land in Wave 3.
 
 ---
 

@@ -109,6 +109,7 @@ Detect business type from ad account signals:
 - **Healthcare**: HIPAA compliance flags, healthcare-specific ad policies
 - **Finance**: Special Ad Categories declared, financial products compliance
 - **Agency**: multiple client accounts, white-label reporting needs
+- **Marketplace Seller (Amazon / Walmart 3P)**: ASIN-level catalogs, ACOS / TACOS metrics, Sponsored Products / Brands / Display spend mix, Brand Registry indicators
 
 ## Quality Gates
 
@@ -252,9 +253,9 @@ This skill orchestrates 22 specialized sub-skills:
 ## Subagents
 
 For parallel analysis during full audits:
-- `audit-google`: Google Ads checks (G01-G74)
-- `audit-meta`: Meta Ads checks (M01-M46)
-- `audit-creative`: Creative quality for LinkedIn, TikTok, Microsoft
+- `audit-google`: Google Ads checks (G01-G61 + 19 hyphenated v1.5+ IDs = 80 total; incl. AI Max)
+- `audit-meta`: Meta Ads checks (M01-M40 + 10 hyphenated v1.5+ IDs = 50 total; incl. Andromeda + Entity-ID clustering)
+- `audit-creative`: Creative quality for LinkedIn, TikTok, Microsoft (plus cross-platform creative-diversity scoring for Andromeda Entity-ID retrieval)
 - `audit-tracking`: Conversion tracking health across all platforms
 - `audit-budget`: Budget, bidding, structure for LinkedIn, TikTok, Microsoft
 - `audit-compliance`: Compliance, settings, performance across all platforms
@@ -262,3 +263,10 @@ For parallel analysis during full audits:
 - `visual-designer`: Image generation with brand injection via generate_image.py (Sonnet, maxTurns: 30)
 - `copy-writer`: Headlines, CTAs, primary text within platform limits (Sonnet, maxTurns: 20)
 - `format-adapter`: Asset dimension validation and spec compliance reporting (Haiku, maxTurns: 15)
+
+**Wave 3 backlog (planned, not yet shipped):**
+- `audit-amazon`: Amazon Sponsored Products / Brands / Display + DSP audit (currently invoked via `ads-amazon` sub-skill standalone)
+- `audit-attribution`: Cross-platform attribution audit (currently invoked via `ads-attribution` sub-skill standalone)
+- `audit-server-side`: Server-side tracking pipeline audit (currently invoked via `ads-server-side-tracking` sub-skill standalone)
+
+Once these land, `/ads audit` will dispatch all three in parallel alongside the existing six.
