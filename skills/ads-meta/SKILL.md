@@ -12,9 +12,9 @@ tested_with: claude-code v2.x
 
 Meta's delivery stack was rebuilt across three releases:
 
-- **Andromeda** (Oct 2025) — ad-retrieval ranking model, 10,000× more complex
-  than the previous funnel. Filters the candidate creative set before the
-  auction layer ever sees it.
+- **Andromeda** (Oct 2025) — ad-retrieval ranking model with 10,000× more
+  model capacity than the previous funnel ([Meta Engineering, Dec 2024](https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/)).
+  Filters the candidate creative set before the auction layer ever sees it.
 - **GEM** (Generative Embedding Model, late 2025) — replaces the feature
   pipeline. Creative *content* embeds directly into the targeting space, which
   is why "creative is the new targeting" is now mechanical truth not slogan.
@@ -22,9 +22,9 @@ Meta's delivery stack was rebuilt across three releases:
   on top of GEM that uses user-action sequences to rank candidate ads.
 
 Net effect: creative diversity is now the #1 performance lever. Ads with
-Similarity Score >60% (per Confect's measured threshold) get retrieval
-suppression — the algorithm clusters near-identical creatives and silently
-limits their delivery. **100 minor variations perform no better than 10
+Similarity Score >60% (per [Confect's measured threshold](https://confect.io/tactics/meta-andromeda-2026))
+get retrieval suppression — the algorithm clusters near-identical creatives
+and silently limits their delivery. **100 minor variations perform no better than 10
 genuinely distinct ones.** Prioritize concept / angle / format diversity over
 variant volume.
 

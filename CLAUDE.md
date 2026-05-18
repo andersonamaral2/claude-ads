@@ -4,9 +4,10 @@
 
 This repository contains **Claude Ads**, a Tier 4 Claude Code skill for comprehensive
 paid advertising analysis across all major platforms. It follows the Agent Skills open
-standard and the 3-layer architecture (directive, orchestration, execution). 19 sub-skills,
+standard and the 3-layer architecture (directive, orchestration, execution). 22 sub-skills,
 10 agents (6 audit + 4 creative), and 12 industry templates cover Google, Meta, YouTube, LinkedIn,
-TikTok, Microsoft, and Apple Ads with 250+ weighted audit checks.
+TikTok, Microsoft, Apple, and Amazon Ads with 250+ weighted audit checks, plus cross-platform
+attribution and server-side tracking deep dives.
 
 ## Architecture
 
@@ -65,13 +66,17 @@ claude-ads/
 
 | Command | Purpose |
 |---------|---------|
-| `/ads audit` | Full multi-platform audit with 6 parallel agents |
-| `/ads google` | Google Ads deep analysis |
-| `/ads meta` | Meta/Facebook Ads analysis |
+| `/ads audit` | Full multi-platform audit with 6 parallel agents (Wave 2 sub-skills run standalone; see notes) |
+| `/ads google` | Google Ads deep analysis (incl. AI Max) |
+| `/ads meta` | Meta/Facebook Ads analysis (Andromeda + GEM + Lattice) |
 | `/ads youtube` | YouTube Ads analysis |
 | `/ads linkedin` | LinkedIn Ads analysis |
 | `/ads tiktok` | TikTok Ads analysis |
 | `/ads microsoft` | Microsoft/Bing Ads analysis |
+| `/ads apple` | Apple Ads (AdAttributionKit, dual attribution) |
+| `/ads amazon` | Amazon Ads (Sponsored Products/Brands/Display, ACOS/TACOS) — *Wave 2* |
+| `/ads attribution` | Cross-platform attribution audit (AAK, GA4, Consent Mode V2, MMP) — *Wave 2* |
+| `/ads tracking` | Server-side tracking pipeline audit (sGTM, CAPI Gateway, dedup, hashing) — *Wave 2* |
 | `/ads creative` | Creative quality and fatigue assessment |
 | `/ads landing` | Landing page conversion analysis |
 | `/ads budget` | Budget allocation optimization |
@@ -80,11 +85,16 @@ claude-ads/
 | `/ads math` | PPC financial calculator (CPA, ROAS, break-even, LTV:CAC) |
 | `/ads test` | A/B test design (hypothesis, significance, sample size) |
 | `/ads report` | PDF audit report generation for client deliverables |
+| `/ads dna <url>` | Extract brand DNA from website → `brand-profile.json` |
+| `/ads create` | Generate campaign concepts + copy briefs → `campaign-brief.md` |
+| `/ads generate` | Generate AI ad images from brief → `ad-assets/` |
+| `/ads photoshoot` | Product photography in 5 styles |
 
 ## Development Rules
 
 - Keep SKILL.md files under 500 lines / 5000 tokens
-- Reference files should be focused and under 200 lines
+- Reference files should be focused; aim for under 350 lines. Split when a
+  single reference exceeds that and starts mixing concerns
 - Scripts must have docstrings, CLI interface, and JSON output
 - Follow kebab-case naming for all skill directories
 - Agents invoked via Task tool with `context: fork`, never via Bash

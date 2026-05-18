@@ -112,8 +112,8 @@ Evaluate which formats are active per platform:
 ## Andromeda Creative Similarity Score (Meta)
 
 Meta's Andromeda engine (launched October 2025) clusters ads with >60% similarity and suppresses delivery
-of near-identical creatives. 100 minor variations (color swaps, small text changes)
-perform no better than 10 genuinely distinct creatives. Evaluate:
+of near-identical creatives ([Confect](https://confect.io/tactics/meta-andromeda-2026); [Meta Engineering](https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/)).
+100 minor variations (color swaps, small text changes) perform no better than 10 genuinely distinct creatives. Evaluate:
 - Are creatives genuinely diverse in concept, angle, and format?
 - Flag accounts relying on iterative variations rather than distinct concepts
 - Recommend testing fundamentally different hooks, formats, and value propositions

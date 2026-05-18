@@ -45,7 +45,7 @@ tested_with: claude-code v2.x
 - Filter Link Extension tested (MS20)
 
 ### Settings & Performance (15% weight)
-- Copilot chat placement enabled for PMax: 73% CTR lift (MS14)
+- Copilot chat placement enabled for PMax: 73% CTR lift + 16% CVR lift vs traditional search ([Microsoft Advertising, Aug 2025](https://about.ads.microsoft.com/en/blog/post/august-2025/73-higher-ctrs-why-advertisers-need-to-pay-attention-to-conversational-ai)) (MS14)
 - Conversion goals configured natively, not relying on imported (MS15)
 - CPC 20-40% lower than Google for same keywords (MS16)
 - CVR comparable to Google, not >50% lower (MS17)
@@ -81,7 +81,8 @@ Microsoft's AI assistant creates unique ad opportunities:
 
 ### Copilot Chat Ads
 - Available in Performance Max campaigns
-- 73% CTR lift reported in chat placement
+- 73% CTR lift + 16% CVR lift vs traditional search (Microsoft study, Nov 2024–May 2025 data; [Microsoft Advertising blog, Aug 2025](https://about.ads.microsoft.com/en/blog/post/august-2025/73-higher-ctrs-why-advertisers-need-to-pay-attention-to-conversational-ai))
+- Lift is from *audience selection* (Copilot users are mid-purchase research), not Copilot-rewritten ad creative
 - Copilot Checkout launched Jan 2026 (in-chat purchase)
 - Natural language ad delivery (conversational context)
 - Copilot ads show beneath AI responses with Sponsored labels

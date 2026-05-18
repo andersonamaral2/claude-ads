@@ -86,3 +86,6 @@ AUDIT-REPORT.md
 # Research prompt drafts (the actual research outputs live in research/)
 research-prompt*.md
 .research-*.md
+
+# Playwright MCP session artifacts (browser console/page logs from interactive runs)
+.playwright-mcp/

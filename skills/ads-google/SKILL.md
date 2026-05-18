@@ -122,9 +122,12 @@ If Performance Max campaigns exist, additionally evaluate:
 ## AI Max for Search (2026)
 
 AI Max layers broad match + keywordless targeting on existing Search campaigns.
-14% avg conversion lift. **DSA, ACA, and campaign-level broad match auto-migrate
-into AI Max by end of September 2026**; new DSA campaign creation via the Google
-Ads API ends Sept 2026. Strong negative keyword lists are a hard prerequisite.
+14% avg conversion lift for non-retail brands at similar CPA/ROAS ([Google Ads blog, May 2025](https://blog.google/products/ads-commerce/google-ai-max-for-search-campaigns/)).
+**DSA, ACA, and campaign-level broad match auto-migrate into AI Max by end of
+September 2026**; new DSA campaign creation via the Google Ads API ends Sept
+2026. Strong negative keyword lists are a hard prerequisite. Independent data
+across 250+ campaigns shows more conservative real-world results (+13% median
+revenue, +16% median CPA) — set expectations accordingly.
 
 ### Detection & API field
 
@@ -208,11 +211,13 @@ drops >25% in the first 7 days.
 
 ## Demand Gen Campaigns
 
-Replaced Video Action Campaigns (April 2026). Video + image = 20% more conversions.
+Replaced Video Action Campaigns (auto-upgrade began July 2025). Adding image
+assets to a video-only campaign drives 20% more conversions at the same CPA
+([Google Ads blog](https://blog.google/products/ads-commerce/video-action-campaigns-demand-gen-upgrade/)).
 Frequency capping NOT supported.
 
 If Demand Gen campaigns exist, evaluate:
-- Video + image asset mix present (combined format drives 20% more conversions)
+- Video + image asset mix present (combined format drives 20% more conversions vs video-only at same CPA)
 - Audience signals configured (custom segments, lookalikes)
 - Conversion tracking aligned with upper/mid-funnel goals
 - Note: frequency capping is not available. Monitor reach vs frequency manually

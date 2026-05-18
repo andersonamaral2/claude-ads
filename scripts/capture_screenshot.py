@@ -59,7 +59,7 @@ def capture_screenshot(
     try:
         url = validate_url(url)
     except ValueError as e:
-        result["error"] = str(e)
+        result["error"] = sanitize_error(e)
         return result
 
     try:

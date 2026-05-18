@@ -78,11 +78,9 @@ For individual commands (`/ads google`, `/ads meta`, `/ads amazon`,
 `/ads attribution`, `/ads tracking`, etc.), load the relevant sub-skill
 directly. Still collect context first if not already provided.
 
-**Wave 2 sub-skills (no dedicated agent yet):** `ads-amazon`, `ads-attribution`,
-and `ads-server-side-tracking` are invoked as standalone sub-skills. Wave 3
-will introduce paired `audit-amazon`, `audit-attribution`, and `audit-server-
-side` agents so the orchestrator can dispatch them in parallel during a full
-audit.
+**Wave 2 sub-skills run standalone (no dedicated agent yet):** `ads-amazon`,
+`ads-attribution`, and `ads-server-side-tracking`. See the Wave 3 backlog at
+the bottom of the Subagents section for the planned paired audit agents.
 
 ## Creative Workflow
 

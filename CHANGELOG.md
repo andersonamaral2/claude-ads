@@ -84,7 +84,7 @@ side tracking, and Amazon retail media.
   section.
 - **Orchestrator routing-table** in `ads/SKILL.md` — 3 new commands
   (`/ads amazon`, `/ads attribution`, `/ads tracking`), sub-skill count
-  refreshed 17 → 22, Community Footer "When to show" extended with new
+  refreshed 19 → 22, Community Footer "When to show" extended with new
   commands, stale reference-file annotations fixed (google 74→80, meta
   46→50, linkedin 25→27, tiktok 25→28, microsoft 20→24 — now matches the
   catalog).

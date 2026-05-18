@@ -35,12 +35,16 @@ import argparse
 import base64
 import json
 import os
-import re
 import struct
 import sys
 import time
 from pathlib import Path
 from urllib.parse import urlparse
+
+# Single source of truth for credential redaction (see scripts/url_utils.py).
+# Re-exported under the local _sanitize_error name so existing call sites do
+# not need to change.
+from url_utils import sanitize_error as _sanitize_error
 
 # Aspect ratio shorthand → (width, height)
 ASPECT_RATIOS = {
@@ -80,17 +84,6 @@ RETRY_BACKOFF = [1, 2, 4, 8]  # seconds
 MAX_BATCH_SIZE = 50
 MAX_DIMENSION = 8192
 _ALLOWED_IMAGE_EXTENSIONS = {'.png', '.jpg', '.jpeg', '.webp', '.gif'}
-_SENSITIVE_PATTERN = re.compile(
-    r'(key|token|secret|password)\s*[=:]\s*\S+|Bearer\s+\S+', re.IGNORECASE,
-)
-
-
-def _sanitize_error(err: Exception) -> str:
-    """Strip potential API keys/tokens from error messages."""
-    msg = str(err)
-    return _SENSITIVE_PATTERN.sub(
-        lambda m: (m.group(1) + '=***') if m.group(1) else 'Bearer ***', msg,
-    )
 
 
 def _actual_dimensions(image_bytes: bytes) -> tuple[int, int] | None:

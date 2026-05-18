@@ -66,7 +66,9 @@ claude-ads works with manually provided data by default (exports, screenshots, p
 - EMQ scores for M04 (requires Events Manager access)
 
 **Alternative: Direct Meta API:**
-Use the included `scripts/fetch_meta_ads.py` with Meta Marketing API credentials for a free, self-hosted option.
+No bundled fetcher ships with claude-ads. For a free, self-hosted option, write
+a thin wrapper around the Meta Marketing API (Graph API) and import its JSON
+output via the standard data-collection flow.
 
 ### LinkedIn Ads: Multiple Options
 

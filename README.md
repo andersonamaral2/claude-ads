@@ -366,7 +366,7 @@ Claude Ads runs entirely on your local machine via Claude Code. No ad account da
 
 For direct API access without manual exports, pair Claude Ads with MCP servers. See `ads/references/mcp-integration.md` for setup guides:
 - **Google Ads**: [mcp-google-ads](https://github.com/cohnen/mcp-google-ads): 29 GAQL tools for live API access
-- **Meta Ads**: [Adspirer MCP](https://www.adspirer.com) or use included `scripts/fetch_meta_ads.py`
+- **Meta Ads**: [Adspirer MCP](https://www.adspirer.com) (commercial); for a self-hosted option, wrap the Meta Marketing API and feed JSON into the standard data-collection flow
 - **LinkedIn Ads**: [GrowthSpree MCP](https://www.growthspreeofficial.com) or [Adzviser MCP](https://adzviser.com)
 
 <p align="center">
