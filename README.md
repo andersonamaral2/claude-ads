@@ -623,24 +623,24 @@ If Claude Ads saves you time, a star on the [public repo](https://github.com/Agr
 
 MIT. See [LICENSE](LICENSE) for details.
 
-
 ---
 
-## 🔔 Scoras Digital DevOps Agent — Verificação
+## ⚠️ Scoras Digital DevOps Agent — Verificação
 
-[![DevOps Score](https://img.shields.io/badge/DevOps%20Score-44%2F100%20(D)-orange?style=for-the-badge&logo=github)](./andersonamaral2_claude-ads_2026-07-03.md)
+[![DevOps Score](https://img.shields.io/badge/DevOps%20Score-56%2F100%20(C)-yellow?style=for-the-badge&logo=github)](./andersonamaral2_claude-ads_2026-07-04.md)
 [![Scoras DevOps Agent](https://img.shields.io/badge/Scoras_DevOps_Agent-Verificado-blue?style=for-the-badge&logo=githubactions)](https://github.com/andersonamaral2/claude-ads)
 
 | Campo | Valor |
 |-------|-------|
 | 🤖 Avaliado por | Scoras Digital DevOps Agent |
-| 📅 Data da Avaliação | `03/07/2026` |
-| 📊 Score DevOps & Segurança | `44/100` |
-| 🎯 Nota | D — Abaixo do esperado |
-| 📄 Relatório Completo | [andersonamaral2_claude-ads_2026-07-03.md](./andersonamaral2_claude-ads_2026-07-03.md) |
+| 📅 Data da Avaliação | `04/07/2026` |
+| 📊 Score DevOps & Segurança | `56/100` |
+| 🎯 Nota | C — Regular |
+| 📄 Relatório Completo | [andersonamaral2_claude-ads_2026-07-04.md](./andersonamaral2_claude-ads_2026-07-04.md) |
 
 > *Este repositório foi auditado automaticamente pelo **Scoras Digital DevOps Agent**,*  
 > *verificando métricas DORA, CI/CD, segurança (CVEs, secrets, SAST) e boas práticas.*  
-> *Última avaliação: **03/07/2026***
+> *Última avaliação: **04/07/2026***
 
 ---
+
